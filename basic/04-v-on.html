@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>dome</title>
+</head>
+
+<body>
+    <div id ="app">
+        <h2>当前计数: {{counter}}</h2>
+        <!-- <button v-on:click="counter++">+</button>
+        <button v-on:click="counter--">-</button> -->
+
+        <button v-on:click="add">+</button>
+        <button v-on:click="sub">-</button>
+    </div>
+</body>
+
+<!-- 引入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            add: function (){
+                console.log('add被执行')
+                this.counter++ 
+
+            },
+            sub: function (){
+                console.log('sub被执行')
+                this.counter--
+
+            }
+        }
+        
+    })
+
+</script>
+</html>
