@@ -1,0 +1,35 @@
+<!-- 数组语法 -->
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>dome</title>
+</head>
+
+<body>
+  <div id ="app">
+    <h2 class="title" :class="[active, line]">{{message}}</h2>
+    <h2 class="title" :class="getClasses()">{{message}}</h2>
+  </div>
+</body>
+
+<!-- 引入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  // 创建Vue实例
+  new Vue({
+    el: '#app',
+    data: {
+      message: "hello world",
+      active: 'aaa',
+      line: 'bbb'
+    },
+    methods: {
+      getClasses: function(){
+        return [this.active, this.line]
+      }
+    }
+  });
+</script>
+</html>

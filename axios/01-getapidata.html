@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>dome</title>
+</head>
+
+<body>
+  <div id ="app">
+    {{info}}
+  </div>
+</body>
+
+<!-- 引入Vue -->
+<script src="../js/vue.js"></script>
+
+<script>
+import axios from 'axios'
+  // 创建Vue实例
+  const app = Vue({
+    el: '#app',
+    data(){
+      return {
+        info: null
+      }
+    },
+    methods: {
+      
+    },
+    mounted(){
+      axios
+        .get('http://127.0.0.1:8000/tyunpubliciplist')
+        .then(response=>(this.info=response))
+    }
+  });
+</script>
+</html>

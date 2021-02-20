@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>dome</title>
+</head>
+
+<body>
+  <div id ="app">
+    <!-- mustache 语法有多种写法 -->
+    <h2>{{message}}</h2>
+    <h2>{{message}}, 李银河!</h2>
+    <h2>{{firstName + ' ' + lastName}}</h2>
+    <h2>{{firstName}} {{lastName}}</h2>
+    <h2>{{counter*2}}</h2>
+  </div>
+</body>
+
+<!-- 引入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+  // 创建Vue实例
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      firstName: 'Kobe',
+      lastName: 'bryant',
+      counter: 100
+
+    },
+    methods: {
+      
+    }
+  });
+</script>
+</html>
